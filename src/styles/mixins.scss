@@ -1,0 +1,19 @@
+@use './variables' as *;
+
+@mixin container {
+  width: min(100% - 32px, $container);
+  margin-inline: auto;
+}
+
+@mixin section {
+  padding: 72px 0;
+
+  @media (min-width: 860px) {
+    padding: 96px 0;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid rgba(243, 193, 75, 0.55);
+  outline-offset: 3px;
+}

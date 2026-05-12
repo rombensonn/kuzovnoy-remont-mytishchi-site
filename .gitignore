@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+*.log
+backend/storage/leads.jsonl
+backend/storage/rate-limit.json
+!backend/storage/uploads/.gitkeep
