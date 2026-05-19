@@ -7,7 +7,7 @@ const items = [
   { icon: ParkingCircle, title: 'Парковка у сервиса', text: 'удобно оставить авто на осмотр' },
   { icon: CreditCard, title: 'Оплата картой', text: 'для ремонта и дополнительных работ' },
   { icon: Wifi, title: 'Wi-Fi', text: 'в зоне ожидания' },
-  { icon: MapPinned, title: 'Мытищи', text: 'ул. Колпакова, 2, корп. 5' }
+  { icon: MapPinned, title: 'Мытищи', text: 'ул. Колпакова, 2; заезд с Новомытищинского пр-та' }
 ];
 
 export function TrustBar() {

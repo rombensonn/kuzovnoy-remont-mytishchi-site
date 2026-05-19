@@ -411,77 +411,23 @@
   min-height: 260px;
   overflow: hidden;
   border-radius: $radius;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    #172532;
-  background-size: 44px 44px;
-}
+  margin: 0;
+  background: #172532;
 
-.carBody,
-.carRoof,
-.carBumper,
-.carWheelLeft,
-.carWheelRight,
-.damagePulse {
-  position: absolute;
-  display: block;
-}
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+  }
 
-.carBody {
-  left: 12%;
-  right: 10%;
-  top: 45%;
-  height: 30%;
-  border-radius: 20px 42px 18px 18px;
-  background: linear-gradient(90deg, #d4ba62, #f3c14b);
-}
-
-.carRoof {
-  left: 28%;
-  top: 28%;
-  width: 36%;
-  height: 26%;
-  clip-path: polygon(16% 100%, 34% 0, 74% 0, 100% 100%);
-  background: #e9eef2;
-}
-
-.carBumper {
-  right: 8%;
-  top: 53%;
-  width: 11%;
-  height: 18%;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.26);
-  border: 2px solid rgba(255, 255, 255, 0.38);
-}
-
-.carWheelLeft,
-.carWheelRight {
-  top: 70%;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: $color-ink;
-  border: 10px solid #415262;
-}
-
-.carWheelLeft {
-  left: 22%;
-}
-
-.carWheelRight {
-  right: 23%;
-}
-
-.damagePulse {
-  right: 18%;
-  top: 39%;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: $color-accent;
-  box-shadow: 0 0 0 12px rgba(243, 193, 75, 0.2), 0 0 0 28px rgba(243, 193, 75, 0.1);
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
 }
 
 .damageControls {
@@ -1057,6 +1003,17 @@
     color: $color-graphite;
     font-size: 18px;
     line-height: 1.55;
+  }
+
+  .contactAccessNote {
+    display: block;
+    max-width: 680px;
+    margin-top: 12px;
+    color: $color-ink;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 950;
+    line-height: 1.08;
+    text-transform: uppercase;
   }
 
   p {

@@ -69,7 +69,6 @@ export const damageOptions = [
 ];
 
 export const extraCapabilities = [
-  'Мойка перед выдачей',
   'Антигравийная пленка',
   'Парковка у сервиса',
   'Предварительная запись',

@@ -8,18 +8,18 @@ export function BeforeAfter() {
         <span className={styles.kicker}>До и после</span>
         <h2 id="before-after-title">Визуальная демонстрация ремонта без обещаний «за час и бесплатно»</h2>
         <p>
-          Блок создан как место для реальных фото цеха и работ. Сейчас стоят локальные placeholder-изображения,
-          чтобы проект не зависел от CDN и внешних фотостоков.
+          Живой пример повреждения и результата после кузовного ремонта: без студийной съемки,
+          как обычные фотографии на телефон в рабочем цехе.
         </p>
         <a className={styles.secondaryDarkButton} href="#estimate">Отправить фото повреждения</a>
       </div>
       <div className={styles.beforeAfterGrid}>
         <figure>
-          <img src={assetPath('/images/repair-before-placeholder.webp')} alt="Поврежденная деталь автомобиля до кузовного ремонта" loading="lazy" />
+          <img src={assetPath('/images/repair-before-phone.webp')} alt="Поврежденная задняя часть автомобиля до кузовного ремонта" loading="lazy" />
           <figcaption>До ремонта</figcaption>
         </figure>
         <figure>
-          <img src={assetPath('/images/repair-after-placeholder.webp')} alt="Деталь автомобиля после ремонта и покраски" loading="lazy" />
+          <img src={assetPath('/images/repair-after-phone.webp')} alt="Задняя часть автомобиля после кузовного ремонта и покраски" loading="lazy" />
           <figcaption>После ремонта</figcaption>
         </figure>
       </div>

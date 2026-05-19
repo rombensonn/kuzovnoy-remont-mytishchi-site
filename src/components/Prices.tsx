@@ -6,7 +6,7 @@ export function Prices() {
     <section id="prices" className={styles.prices} aria-labelledby="prices-title">
       <div className={styles.pricesHeader}>
         <span className={styles.kicker}>Стоимость</span>
-        <h2 id="prices-title">Стартовые ориентиры без растянутого «прайс-листа на всё»</h2>
+        <h2 id="prices-title">Стоимость называем после осмотра автомобиля</h2>
         <p>
           Итоговая цена зависит от скрытых повреждений, площади ремонта, материалов и окраски.
           После осмотра фиксируем понятный состав работ.
@@ -25,7 +25,7 @@ export function Prices() {
         ))}
       </div>
       <div className={styles.priceNotice}>
-        <p>Ориентиры основаны на данных карточки Яндекс Карт и уточняются после осмотра автомобиля.</p>
+        <p>Так мастер видит доступ к повреждению, состояние ЛКП и скрытые работы до финального расчета.</p>
       </div>
     </section>
   );
