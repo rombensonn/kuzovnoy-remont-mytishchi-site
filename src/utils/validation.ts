@@ -34,7 +34,7 @@ export function validateLead(values: LeadFormValues): ValidationErrors {
   }
 
   if (!values.privacy) {
-    errors.privacy = 'Нужно согласие с политикой конфиденциальности.';
+    errors.privacy = 'Нужно согласие с политикой обработки персональных данных.';
   }
 
   return errors;

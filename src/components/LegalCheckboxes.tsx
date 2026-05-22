@@ -33,7 +33,7 @@ export function LegalCheckboxes({ personalData, privacy, onChange, errors }: Pro
           onChange={(event) => onChange('privacy', event.target.checked)}
         />
         <span>
-          Согласен с <a href={assetPath('/privacy-policy.html')} target="_blank">политикой конфиденциальности</a>.
+          Согласен с <a href={assetPath('/privacy-policy.html')} target="_blank">политикой обработки персональных данных</a>.
         </span>
       </label>
       {errors.privacy && <small role="alert">{errors.privacy}</small>}

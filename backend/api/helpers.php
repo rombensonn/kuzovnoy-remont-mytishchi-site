@@ -172,7 +172,7 @@ function validate_lead(array $data): array
     }
 
     if (!$lead['privacy']) {
-        $errors['privacy'] = 'Нужно согласие с политикой конфиденциальности.';
+        $errors['privacy'] = 'Нужно согласие с политикой обработки персональных данных.';
     }
 
     if ($errors !== []) {

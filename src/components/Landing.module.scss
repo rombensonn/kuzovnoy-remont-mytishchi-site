@@ -48,7 +48,7 @@
   border-radius: $radius;
   background: $color-ink;
   color: $color-accent;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .nav {
@@ -89,7 +89,7 @@
   display: none;
   align-items: center;
   gap: 8px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .primarySmall,
@@ -104,7 +104,7 @@
   min-height: 46px;
   border: 0;
   border-radius: $radius;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 
@@ -175,9 +175,9 @@
 
   h1 {
     margin: 18px 0;
-    font-size: clamp(42px, 7vw, 88px);
-    line-height: 0.92;
-    max-width: 920px;
+    font-size: clamp(38px, 5.4vw, 72px);
+    line-height: 0.96;
+    max-width: 780px;
     text-wrap: balance;
   }
 }
@@ -189,7 +189,7 @@
   gap: 8px;
   margin: 0;
   color: $color-accent;
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .heroText {
@@ -267,7 +267,7 @@
   span {
     color: $color-accent-dark;
     font-size: 13px;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
   }
 
@@ -301,7 +301,7 @@
 
   dt {
     font-size: 28px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1;
   }
 
@@ -449,7 +449,7 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.86);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .damageActive {
@@ -469,7 +469,7 @@
   span {
     color: $color-accent-dark;
     font-size: 12px;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
   }
 
@@ -485,7 +485,7 @@
 
   a {
     color: $color-accent-dark;
-    font-weight: 900;
+    font-weight: 700;
   }
 }
 
@@ -630,7 +630,7 @@
     border-radius: $radius;
     background: $color-accent;
     color: $color-ink;
-    font-weight: 900;
+    font-weight: 700;
   }
 
   h3,
@@ -722,7 +722,7 @@
     border-radius: $radius;
     background: rgba(16, 24, 32, 0.82);
     color: $color-white;
-    font-weight: 800;
+    font-weight: 700;
   }
 }
 
@@ -737,7 +737,7 @@
   right: 16px;
   color: rgba(16, 24, 32, 0.08);
   font-size: 54px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -765,7 +765,7 @@
 
   a {
     color: $color-accent-dark;
-    font-weight: 850;
+    font-weight: 700;
   }
 }
 
@@ -795,7 +795,7 @@
     em {
       font-style: normal;
       color: $color-accent-dark;
-      font-weight: 800;
+      font-weight: 700;
     }
   }
 }
@@ -832,7 +832,7 @@
     border-radius: $radius;
     background: $color-surface;
     color: $color-graphite;
-    font-weight: 750;
+    font-weight: 700;
 
     &::before {
       content: '';
@@ -861,7 +861,7 @@
     display: grid;
     gap: 8px;
     color: $color-graphite;
-    font-weight: 750;
+    font-weight: 700;
   }
 
   input,
@@ -874,6 +874,7 @@
     color: $color-ink;
     padding: 12px 13px;
     min-height: 48px;
+    font-weight: 400;
   }
 
   textarea {
@@ -924,7 +925,7 @@
 
   a {
     color: $color-accent-dark;
-    font-weight: 800;
+    font-weight: 700;
   }
 }
 
@@ -960,21 +961,86 @@
   background: rgba(180, 35, 24, 0.08);
 }
 
+.faq {
+  width: min(100% - 32px, 960px);
+
+  .sectionHeader {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .kicker {
+    justify-content: center;
+  }
+}
+
 .faqList {
   display: grid;
   gap: 10px;
 
-  details {
+  h3 {
+    margin: 0;
+    font-size: inherit;
+  }
+}
+
+.faqItem,
+.faqItemOpen {
     border: 1px solid $color-line;
     border-radius: $radius;
     background: $color-white;
-  }
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
 
-  summary {
-    cursor: pointer;
-    padding: 18px 20px;
-    font-weight: 850;
+.faqItemOpen {
+  border-color: rgba(185, 130, 0, 0.42);
+  box-shadow: 0 14px 32px rgba(16, 24, 32, 0.08);
+}
+
+.faqQuestion {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 0;
+  background: transparent;
+  color: $color-ink;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+
+  svg {
+    flex: 0 0 auto;
+    color: $color-accent-dark;
+    transition: transform 0.25s ease;
   }
+}
+
+.faqItemOpen .faqQuestion svg {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.3s ease, opacity 0.22s ease;
+}
+
+.faqItemOpen .faqAnswer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.faqAnswerInner {
+  min-height: 0;
+  overflow: hidden;
 
   p {
     margin: 0;
@@ -1011,7 +1077,7 @@
     margin-top: 12px;
     color: $color-ink;
     font-size: clamp(22px, 4vw, 34px);
-    font-weight: 950;
+    font-weight: 700;
     line-height: 1.08;
     text-transform: uppercase;
   }
@@ -1027,7 +1093,7 @@
   gap: 8px;
   margin-top: 16px;
   font-size: 24px;
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .contactActions {
@@ -1057,9 +1123,11 @@
 .footer {
   @include container;
   display: grid;
-  gap: 16px;
-  padding: 28px 0 98px;
+  gap: 22px;
+  padding: 32px 0 104px;
+  border-top: 1px solid $color-line;
   color: $color-muted;
+  font-size: 14px;
 
   strong,
   span {
@@ -1068,18 +1136,65 @@
 
   strong {
     color: $color-ink;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+    font-size: 16px;
   }
 
   a {
+    color: $color-graphite;
+    font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 4px;
   }
+}
+
+.footerBrand {
+  display: grid;
+  gap: 6px;
+  line-height: 1.45;
+}
+
+.footerLegal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid $color-line;
+  border-radius: $radius;
+  background: $color-surface;
+
+  div {
+    min-width: 0;
+  }
+
+  dt {
+    margin-bottom: 4px;
+    color: $color-muted;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0;
+    color: $color-graphite;
+    font-weight: 650;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+}
+
+.footerDocs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.footerNote {
+  max-width: 760px;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .mobileCta {
@@ -1105,7 +1220,7 @@
     border-radius: $radius;
     background: $color-white;
     color: $color-ink;
-    font-weight: 850;
+    font-weight: 600;
   }
 }
 
@@ -1136,9 +1251,14 @@
   }
 
   .footer {
-    grid-template-columns: 1fr auto;
-    align-items: center;
+    grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+    align-items: start;
     padding-bottom: 36px;
+  }
+
+  .footerDocs,
+  .footerNote {
+    grid-column: 1 / -1;
   }
 
   .mobileCta {

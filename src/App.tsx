@@ -12,8 +12,11 @@ import { FAQ } from './components/FAQ';
 import { Contacts } from './components/Contacts';
 import { Footer } from './components/Footer';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
+import { useHashlessAnchorScroll } from './hooks/useHashlessAnchorScroll';
 
 function App() {
+  useHashlessAnchorScroll();
+
   return (
     <>
       <Header />

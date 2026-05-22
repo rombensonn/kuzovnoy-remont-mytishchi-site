@@ -17,7 +17,16 @@ export const business = {
     lng: 37.747862
   },
   workingHours: 'Ежедневно по предварительной записи',
-  leadEmail: 'owner@example.ru'
+  leadEmail: 'vikavto@bk.ru',
+  legalName: 'ИП Гудков Евгений Евгеньевич',
+  inn: '771801221085',
+  ogrn: '304770000070770',
+  legalAddress: '107370, г. Москва, ул. Открытое шоссе, д. 5, корп. 3, кв. 62',
+  postalAddress: '141002, Московская область, г. Мытищи, Новомытищинский проспект, вл. 5',
+  legalPhone: '8 (495) 586-25-66',
+  legalFax: '8 (495) 583-39-13',
+  personalDataEmail: 'vikavto@bk.ru',
+  siteUrl: 'https://kuzovnoy-remont-mytishi.ru'
 };
 
 export const heroStats = [
