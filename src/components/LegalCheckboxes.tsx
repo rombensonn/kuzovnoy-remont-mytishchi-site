@@ -21,7 +21,7 @@ export function LegalCheckboxes({ personalData, privacy, onChange, errors }: Pro
           onChange={(event) => onChange('personalData', event.target.checked)}
         />
         <span>
-          Даю согласие на <a href={assetPath('/personal-data-consent.html')} target="_blank">обработку персональных данных</a>.
+          Даю согласие на <a href={assetPath('/personal-data-consent')} target="_blank">обработку персональных данных</a>.
         </span>
       </label>
       {errors.personalData && <small role="alert">{errors.personalData}</small>}
@@ -33,7 +33,7 @@ export function LegalCheckboxes({ personalData, privacy, onChange, errors }: Pro
           onChange={(event) => onChange('privacy', event.target.checked)}
         />
         <span>
-          Согласен с <a href={assetPath('/privacy-policy.html')} target="_blank">политикой обработки персональных данных</a>.
+          Согласен с <a href={assetPath('/privacy-policy')} target="_blank">политикой обработки персональных данных</a>.
         </span>
       </label>
       {errors.privacy && <small role="alert">{errors.privacy}</small>}

@@ -13,7 +13,7 @@ export function Reviews() {
           На Яндекс Картах у сервиса {business.rating}, {business.ratingsCount} оценки и {business.reviewsCount} отзывов.
           Ниже — короткие выдержки по кузовным работам.
         </p>
-        <a href={business.mapsUrl} target="_blank" rel="noreferrer">Смотреть карточку на Яндекс Картах</a>
+        <a href={business.reviewsUrl} target="_blank" rel="noreferrer">Смотреть карточку на Яндекс Картах</a>
       </div>
       <div className={styles.reviewGrid}>
         {reviews.map((review) => (

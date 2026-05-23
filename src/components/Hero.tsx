@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section id="top" className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.heroMedia} aria-hidden="true">
-        <img src={assetPath('/images/hero-placeholder.webp')} alt="" />
+        <img src={assetPath('/images/hero-service-photo.webp')} alt="" />
       </div>
       <div className={styles.heroOverlay} />
       <div className={styles.heroInner}>

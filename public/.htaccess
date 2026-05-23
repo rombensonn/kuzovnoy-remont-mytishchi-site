@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteRule ^privacy-policy$ privacy-policy/index.html [L]
+RewriteRule ^personal-data-consent$ personal-data-consent/index.html [L]
+RewriteRule ^cookie-notice$ cookie-notice/index.html [L]
+
+RewriteRule ^privacy-policy\.html$ /privacy-policy [R=301,L]
+RewriteRule ^personal-data-consent\.html$ /personal-data-consent [R=301,L]
+RewriteRule ^cookie-notice\.html$ /cookie-notice [R=301,L]

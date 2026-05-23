@@ -2,6 +2,26 @@ import { useEffect } from 'react';
 
 export function useHashlessAnchorScroll() {
   useEffect(() => {
+    function cleanUrl() {
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    }
+
+    function scrollToAnchor(hash: string) {
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+
+      if (!target) {
+        return false;
+      }
+
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      cleanUrl();
+      return true;
+    }
+
+    if (window.location.hash.length > 1) {
+      window.requestAnimationFrame(() => scrollToAnchor(window.location.hash));
+    }
+
     function handleClick(event: MouseEvent) {
       if (
         event.defaultPrevented ||
@@ -29,8 +49,7 @@ export function useHashlessAnchorScroll() {
       }
 
       event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+      scrollToAnchor(href);
     }
 
     document.addEventListener('click', handleClick);

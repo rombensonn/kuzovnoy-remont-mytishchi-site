@@ -12,10 +12,16 @@ import { FAQ } from './components/FAQ';
 import { Contacts } from './components/Contacts';
 import { Footer } from './components/Footer';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
+import { getStaticLegalPagePath, StaticLegalPage } from './components/StaticLegalPage';
 import { useHashlessAnchorScroll } from './hooks/useHashlessAnchorScroll';
 
 function App() {
   useHashlessAnchorScroll();
+  const staticLegalPagePath = getStaticLegalPagePath(window.location.pathname);
+
+  if (staticLegalPagePath) {
+    return <StaticLegalPage pagePath={staticLegalPagePath} />;
+  }
 
   return (
     <>

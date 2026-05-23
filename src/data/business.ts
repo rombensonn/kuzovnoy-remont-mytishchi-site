@@ -10,8 +10,9 @@ export const business = {
   reviewsCount: 40,
   award: 'Хорошее место 2026',
   source: 'Яндекс Карты',
-  mapsUrl: 'https://yandex.ru/maps/-/CPskEQo~',
-  mapWidgetUrl: 'https://yandex.ru/map-widget/v1/?ll=37.747844%2C55.914952&mode=whatshere&whatshere%5Bpoint%5D=37.747862%2C55.915014&whatshere%5Bzoom%5D=17&z=19.11',
+  mapsUrl: 'https://yandex.ru/maps/10740/mytischi/?ll=37.747881%2C55.915143&mode=whatshere&whatshere%5Bpoint%5D=37.747862%2C55.915014&whatshere%5Bzoom%5D=17&z=19.11',
+  reviewsUrl: 'https://yandex.com/maps/-/CPcHYTP1',
+  mapWidgetUrl: 'https://yandex.ru/map-widget/v1/?ll=37.747881%2C55.915143&z=19.11&pt=37.747862%2C55.915014%2Cpm2rdm',
   coordinates: {
     lat: 55.915014,
     lng: 37.747862
@@ -24,7 +25,9 @@ export const business = {
   legalAddress: '107370, г. Москва, ул. Открытое шоссе, д. 5, корп. 3, кв. 62',
   postalAddress: '141002, Московская область, г. Мытищи, Новомытищинский проспект, вл. 5',
   legalPhone: '8 (495) 586-25-66',
+  legalPhoneHref: 'tel:+74955862566',
   legalFax: '8 (495) 583-39-13',
+  legalFaxHref: 'tel:+74955833913',
   personalDataEmail: 'vikavto@bk.ru',
   siteUrl: 'https://kuzovnoy-remont-mytishi.ru'
 };

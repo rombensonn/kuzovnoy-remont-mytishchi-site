@@ -32,14 +32,19 @@ export function Footer() {
         </div>
         <div>
           <dt>Обращения по персональным данным</dt>
-          <dd>{business.personalDataEmail}; {business.legalPhone}</dd>
+          <dd>
+            {business.personalDataEmail};{' '}
+            <a className={styles.textPhoneLink} href={business.legalPhoneHref}>
+              {business.legalPhone}
+            </a>
+          </dd>
         </div>
       </dl>
 
       <nav className={styles.footerDocs} aria-label="Документы по персональным данным">
-        <a href={assetPath('/privacy-policy.html')}>Политика обработки персональных данных</a>
-        <a href={assetPath('/personal-data-consent.html')}>Согласие на обработку персональных данных</a>
-        <a href={assetPath('/cookie-notice.html')}>Уведомление о cookie</a>
+        <a href={assetPath('/privacy-policy')}>Политика обработки персональных данных</a>
+        <a href={assetPath('/personal-data-consent')}>Согласие на обработку персональных данных</a>
+        <a href={assetPath('/cookie-notice')}>Уведомление о cookie</a>
       </nav>
 
       <p className={styles.footerNote}>

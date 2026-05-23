@@ -22,6 +22,8 @@ export function validateLead(values: LeadFormValues): ValidationErrors {
 
   if (values.name.trim().length < 2) {
     errors.name = 'Укажите имя.';
+  } else if (/\p{N}/u.test(values.name)) {
+    errors.name = 'Имя должно быть без цифр.';
   }
 
   const phone = normalizePhone(values.phone);
